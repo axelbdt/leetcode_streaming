@@ -28,10 +28,3 @@ def test_climb_stairs(n, expected):
     Tests the climb_stairs function with various inputs.
     """
     assert climb_stairs(n) == expected
-
-
-def test_climb_stairs_constraint_min():
-    """
-    Tests the minimum constraint for n.
-    """
-    assert climb_stairs(1) == 1

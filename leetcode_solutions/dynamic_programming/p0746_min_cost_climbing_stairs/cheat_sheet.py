@@ -14,6 +14,9 @@ def min_cost_climbing_stairs_rec(cost):
     return min(helper(0), helper(1))
 
 
+# Note : overlap because several ways to reach the same floor, but min cost from this floor is unchanged
+
+
 # Aside : recursive with tail call optimization (accumlated cost as a parameter)
 def min_cost_climbing_stairs_rec2(cost):
     def helper(current_floor, current_cost):
