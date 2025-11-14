@@ -1,0 +1,16 @@
+import pytest
+
+from deriveit.graphs import GraphNode
+
+from .solution import num_nodes
+
+test_cases = [
+    (GraphNode.of([[1, 1, 2], [2], [3, 3], [4, 0]]), 4),
+    (GraphNode.of([[0]]), 1),
+    (GraphNode.of([[0, 1, 2], [1], [2]]), 3),
+]
+
+
+@pytest.mark.parametrize("test_case", test_cases)
+def test_check(test_case):
+    assert num_nodes(test_case[0]) == test_case[1]
